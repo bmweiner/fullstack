@@ -5,7 +5,7 @@ JHU Fullstack Course Assignments
 
 ## Assignments
 
-* Assignment 2: [https://bmweiner.com/fullstack/assignment2/](https://bmweiner.com/fullstack/assignment2/)
+* Assignment 2: [https://bmweiner.github.io/fullstack/assignment2/](https://bmweiner.github.io/fullstack/assignment2/)
 
 ## Development
 
