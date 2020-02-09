@@ -5,8 +5,7 @@ JHU Fullstack Course Assignments
 
 ## Assignments
 
-* Module2 - Contains submission for assignment 2
-
+* Assignment 2: <a>/assignment2</a>
 
 ## Development
 
