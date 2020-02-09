@@ -1,0 +1,121 @@
+/* base styles */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    color:#000000;
+}
+
+.banner h1 {
+    font-size: 1.75em;
+    text-align: center;
+    padding: 25px;
+}
+
+.banner :nth-child(2){
+    text-align: left;
+    padding: 15px 10px;
+    font-size: 1.5em;
+    font-family: Georgia, Times, serif;
+    display: none;
+}
+
+.row {
+    width: 100%;
+    padding: 0px 10px;
+}
+
+.col {
+    float: left;
+    padding: 0px 10px 10px 10px;
+}
+
+.item {
+    background-color: #999999;
+    border: 1px solid #000000;
+}
+
+.title h2 {
+    text-align: center;
+    font-size: 1.25em;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 0px 0px 1px 1px;
+    width: 150px;
+    float: right;
+}
+
+.title h2:nth-child(2){
+    width: 100%;
+    border-width: 0px 0px 1px 0px;
+    display: none;
+}
+
+.row .col:nth-child(1) .title h2 {
+    background-color: #d59897;
+}
+
+.row .col:nth-child(2) .title h2 {
+    background-color: #c14543;
+    color: #ffffff;
+}
+
+.row .col:nth-child(3) .title h2 {
+    background-color: #e5d198;
+}
+
+.description {
+    clear: both;
+    height: 150px;
+    padding: 10px;
+    overflow: auto;
+}
+
+.description:hover{
+    cursor: ns-resize;
+    overflow: scroll;
+}
+
+/* Mobile equal to or less than 767px. */
+@media (max-width: 767px) {
+    .col {
+        width: 100%;
+    }
+
+    .banner :nth-child(1){
+        display: none;
+    }
+
+    .banner :nth-child(2){
+        display: block;
+    }
+
+    .title h2:nth-child(1){
+        display: none;
+    }
+
+    .title h2:nth-child(2){
+        display: block;
+    }
+
+}
+
+/* Tablet between 768px and 991px, inclusively */
+@media (min-width: 768px) and (max-width: 991px){
+    .col {
+        width: 50%;
+    }
+
+    .col:last-child {
+        width: 100%;
+    }
+}
+
+/* Desktop 992px and above */
+@media (min-width: 992px) {
+    .col {
+        width: 33.33%;
+    }
+}
