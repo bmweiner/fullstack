@@ -1,0 +1,39 @@
+/* base styles */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    color:#000000;
+}
+
+/* Navbar */
+.navbar{
+    background-color: #999999;
+    border-bottom: 2px solid #000000;
+}
+
+#navbarNav{
+    background-color: #d8d8d8;
+    border: 2px solid #000000;
+    border-top: 0px;
+}
+
+.nav-link{
+    color: #000000;
+    text-decoration: none;
+    border: 1px solid #000000;
+}
+
+/* Main Content */
+#top{
+    padding: 20px;
+    margin: 0px;
+}
+
+.menu-item h3, .menu-item p{
+    background-color: #999999;
+    padding: 10px;
+}
+
+.menu-item h3 {
+    padding-bottom: 0px;
+    margin: 0px;
+}
