@@ -9,6 +9,8 @@ JHU Fullstack Course Assignments
 
 * Assignment 3: [https://bmweiner.github.io/fullstack/assignment3/](https://bmweiner.github.io/fullstack/assignment3/)
 
+* Assignment 4: [https://bmweiner.github.io/fullstack/assignment4/](https://bmweiner.github.io/fullstack/assignment4/)
+
 ## Development
 
 To view the files with a local server, use `browser-sync`:
