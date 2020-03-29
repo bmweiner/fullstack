@@ -24,6 +24,7 @@
         color: green;
       }
     </style>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 <body ng-app="ShoppingListCheckOff">
   <div class="container">
@@ -37,6 +38,7 @@
      <ul>
        <li ng-repeat="item in buy.items">
          Buy {{item.quantity}} {{item.name}}
+         <input type="text" class="quantity-input" ng-model="item.quantity">
         <button ng-click="buy.boughtItem($index);" class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button>
        </li>
      </ul>
@@ -48,7 +50,7 @@
      <h2>Already Bought:</h2>
      <ul>
       <li ng-repeat="item in bought.items">
-        Bought {{item.quantity}} {{item.name}}
+        Bought {{item.quantity}} of {{item.name}} for total price of {{item.price}}
       </li>
      </ul>
      <div ng-if="bought.items.length == 0" class="emptyMessage">Nothing bought yet.</div>

@@ -5,6 +5,7 @@
         .controller('ToBuyController', ToBuyController)
         .controller('AlreadyBoughtController', AlreadyBoughtController)
         .service('ShoppingListCheckOffService', ShoppingListCheckOffService)
+        .filter('price', priceFilter)
     ;
         
     ToBuyController.$inject = ['ShoppingListCheckOffService'];
@@ -25,15 +26,16 @@
 
     }
 
-    function ShoppingListCheckOffService(){
+    ShoppingListCheckOffService.$inject = ['priceFilter'];
+    function ShoppingListCheckOffService(priceFilter){
         var service = this;
 
         var itemsToBuy = [
-            { name: "cookies", quantity: 10 },
-            { name: "oranges", quantity: 5 },
-            { name: "soap", quantity: 2 },
-            { name: "pepper", quantity: 3 },
-            { name: "wine", quantity: 20 },
+            { name: "cookies", quantity: 10, pricePerItem: 1 },
+            { name: "oranges", quantity: 5, pricePerItem: .75 },
+            { name: "soap", quantity: 2, pricePerItem: 3 },
+            { name: "pepper", quantity: 3, pricePerItem: 2 },
+            { name: "wine", quantity: 20, pricePerItem: 15 },
         ];
 
         var itemsBought = [];
@@ -41,6 +43,7 @@
         service.boughtItem = function (itemIndex){
             console.log(itemIndex);
             var item = itemsToBuy.splice(itemIndex, 1)[0];
+            item.price = priceFilter(item.quantity * item.pricePerItem);
             itemsBought.push(item);
         };
 
@@ -52,6 +55,13 @@
             return itemsBought;
         };
 
+    }
+
+    priceFilter.$inject = ['$filter'];
+    function priceFilter($filter){
+        return function (input){
+            return '$$$' + $filter('currency')(input, '')
+        }
     }
 
 })();
