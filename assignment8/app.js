@@ -70,7 +70,7 @@
 
     function FoundItemsDirective() {
         var ddo = {
-            templateUrl: 'foundItems.html',
+            templateUrl: 'snippets/foundItems.html',
             scope: {
                 found: '<',
                 onRemove: '&'
