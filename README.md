@@ -23,6 +23,8 @@ JHU Fullstack Course Assignments
 
 * Assignment 10: [https://bmweiner.github.io/fullstack/assignment10/index.html](https://bmweiner.github.io/fullstack/assignment10/index.html)
 
+* Assignment 10 (Test): [https://bmweiner.github.io/fullstack/assignment10/SpecRunner.html](https://bmweiner.github.io/fullstack/assignment10/SpecRunner.html)
+
 ## Development
 
 To view the files with a local server, use `browser-sync`:
