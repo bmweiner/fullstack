@@ -1,0 +1,70 @@
+<h2>Newsletter Sign Up</h2>
+
+<!-- First Name -->
+<form name="signup" novalidate>
+    <div class="form-group">
+        <label for="firstname">First Name</label>
+        <input ng-model="ctrl.firstname" id="firstname" name="firstname"
+        type="text" class="form-control"  placeholder="First Name" required>
+        <small 
+        ng-if="signup.firstname.$error.required && signup.firstname.$touched"
+        class="form-text text-muted">
+            First Name is required
+        </small>
+    </div>
+
+    <!-- Last Name -->
+    <div class="form-group">
+        <label for="lastname">Last Name</label>
+        <input ng-model="ctrl.lastname" id="lastname" name="lastname" 
+            type="text" class="form-control" placeholder="Last Name" required>
+        <small ng-if="signup.lastname.$error.required && signup.lastname.$touched" class="form-text text-muted">
+            Last Name is required
+        </small>
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input ng-model="ctrl.email" id="email" name="email" type="text" 
+            class="form-control" placeholder="handle@domain" required>
+        <small ng-if="signup.email.$invalid && signup.email.$touched" class="form-text text-muted">
+            Email must be in format handle@domain
+        </small>
+    </div>
+
+    <!-- phone -->
+    <div class="form-group">
+        <label for="phone">phone</label>
+        <input ng-model="ctrl.phone" id="phone" name="phone" type="text" 
+            class="form-control" placeholder="###-###-####" required
+            pattern="(\d{3})-(\d{3})-(\d{4})">
+        <small ng-if="signup.phone.$invalid && signup.phone.$touched" class="form-text text-muted">
+            Phone must be in format ###-###-####
+        </small>
+    </div>
+        
+    <!-- short_name -->
+    <div class="form-group">
+        <label for="shortname">Menu Number of Favorite Dish</label>
+        <input ng-model="ctrl.shortname" id="shortname" name="shortname"
+            ng-model-options="{ updateOn: 'blur' }" 
+            type="text" class="form-control" placeholder="A1" shortname>
+
+        <small ng-if="signup.shortname.$pending.shortname && signup.shortname.$touched" class="form-text text-muted">
+            Checking Short Name...
+        </small>
+
+        <small ng-if="signup.shortname.$error.shortname && signup.shortname.$touched" class="form-text text-muted">
+            No such menu number exists
+        </small>
+    </div>
+
+    <!-- submit button -->
+    <button ng-click="ctrl.submit()" ng-disabled="signup.$invalid" class="btn btn-primary">
+        Submit
+    </button>
+    <small ng-if="ctrl.submitted" class="form-text text-muted">
+        Your information has been saved
+    </small>
+</form>

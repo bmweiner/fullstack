@@ -1,0 +1,35 @@
+<h2>Registered Info</h2>
+
+<div class="container" ng-if="ctrl.submitted">
+    <div class="row">
+        <div class="col">First Name: {{ctrl.firstname}}</div>
+    </div>
+    <div class="row">
+        <div class="col">Last Name: {{ctrl.lastname}}</div>
+    </div>
+    <div class="row">
+        <div class="col">Email: {{ctrl.email}}</div>
+    </div>
+    <div class="row">
+        <div class="col">Phone: {{ctrl.phone}}</div>
+    </div>
+    <div class="row">
+        <div class="col">Favorite Item Short Name: {{ctrl.shortname}}</div>
+    </div>
+    <div class="row">
+        <div class="col">Favorite Item Title: {{ctrl.title}}</div>
+    </div>
+    <div class="row">
+        <div class="col">Favorite Item Description: {{ctrl.description}}</div>
+    </div>
+    <div class="row">
+        <div class="col">
+            Favorite Item Picture: 
+            <img width="250" height="150" src="{{ctrl.img}}">
+        </div>
+    </div>
+</div>
+
+<div ng-if="!ctrl.submitted">
+    Not Signed Up Yet. <a ui-sref="public.signup">Sign Up Now!</a>
+</div>
